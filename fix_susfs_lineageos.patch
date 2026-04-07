@@ -1,11 +1,21 @@
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
-@@ -26,7 +26,8 @@
+@@ -26,6 +26,17 @@
  #include <linux/bootmem.h>
  #include <linux/task_work.h>
  #include <linux/sched/task.h>
  #include <linux/fs_context.h>
 +#include <linux/susfs.h>
++
++#ifndef DEFAULT_KSU_MNT_ID
++#define DEFAULT_KSU_MNT_ID 1000000000
++#define DEFAULT_KSU_MNT_GROUP_ID 1000000000
++#define VFSMOUNT_MNT_FLAGS_KSU_UNSHARED_MNT 0x2000000
++#define CL_COPY_MNT_NS (1<<23)
++DEFINE_IDA(susfs_mnt_id_ida);
++DEFINE_IDA(susfs_mnt_group_ida);
++bool susfs_is_sdcard_android_data_decrypted = false;
++#endif
  
  #include "pnode.h"
  #include "internal.h"
