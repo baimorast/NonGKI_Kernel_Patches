@@ -1,6 +1,6 @@
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
-@@ -26,6 +26,23 @@
+@@ -26,6 +26,26 @@
  #include <linux/bootmem.h>
  #include <linux/task_work.h>
  #include <linux/sched/task.h>
