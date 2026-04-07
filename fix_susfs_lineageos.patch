@@ -1,0 +1,10 @@
+--- a/fs/namespace.c
++++ b/fs/namespace.c
+@@ -26,6 +26,7 @@
+ #include <linux/bootmem.h>
+ #include <linux/task_work.h>
+ #include <linux/sched/task.h>
++#include <linux/susfs.h>
+ 
+ #include "pnode.h"
+ #include "internal.h"
