@@ -5,7 +5,7 @@
  #include <linux/task_work.h>
  #include <linux/sched/task.h>
  #include <linux/fs_context.h>
-+#include <linux/susfs.h>
++#include <linux/susfs_def.h>
 
  #include "pnode.h"
  #include "internal.h"
